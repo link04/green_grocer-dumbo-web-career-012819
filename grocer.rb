@@ -21,6 +21,8 @@ def apply_coupons(cart, coupons)
     coupons.each do |coupon|
       
      if coupon.keys[0] == cart[coupon.keys[0]]
+       
+     end
       
     end
     new_hash
