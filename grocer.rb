@@ -20,7 +20,7 @@ def apply_coupons(cart, coupons)
   if coupons.length > 0
     coupons.each do |coupon|
       
-     if coupon[:item] == cart[coupon[:item] ]
+     if coupon[:item] == cart[coupon[:item]]
        
      end
       
