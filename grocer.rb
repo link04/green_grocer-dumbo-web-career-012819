@@ -20,18 +20,18 @@ def apply_coupons(cart, coupons)
    coupons.each do |coupon|
     coupon_name = coupon[:item]
     coupon_item_num = coupon[:num]
-    cart_item = cart[coupon_name]
+    cart_item = new_hash[coupon_name]
 
      next if cart_item.nil? || cart_item[:count] < coupon_item_num
 
      cart_item[:count] -= coupon_item_num
 
-     coupon_in_cart = cart["#{coupon_name} W/COUPON"]
+     coupon_in_cart = new_hash["#{coupon_name} W/COUPON"]
 
      if coupon_in_cart
       coupon_in_cart[:count] += 1
     else
-      cart["#{coupon_name} W/COUPON"] = { 
+      new_hash["#{coupon_name} W/COUPON"] = { 
         price: coupon[:cost], 
         clearance: cart_item[:clearance], 
         count: 1
