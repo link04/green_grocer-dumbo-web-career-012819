@@ -23,6 +23,10 @@ def apply_coupons(cart, coupons)
      if coupon[:item] == cart[coupon[:item]] 
        
        if new_hash[coupon[:item]]
+         
+       else
+         new_hash[coupon[:item]] = cart[coupon[:item]]
+       end
        
      end
     end
@@ -30,7 +34,7 @@ def apply_coupons(cart, coupons)
   else
     cart
   end
- binding.pry
+#binding.pry
 end
 
 def apply_clearance(cart)
