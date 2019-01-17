@@ -20,23 +20,12 @@ def apply_coupons(cart, coupons)
   if coupons.length > 0
     coupons.each do |coupon|
       
-     if coupon[:item] == cart[coupon[:item]] 
-       
-       if new_hash["#{coupon[:item]} W/COUPON"]
-         
-         new_hash["#{coupon[:item]} W/COUPON"][:count] += 1
-         
-       else
-         new_hash["#{coupon[:item]} W/COUPON"] = cart[coupon[:item]]
-       end
-       
-     end
     end
     new_hash
   else
     cart
   end
-#binding.pry
+ 
 end
 
 def apply_clearance(cart)
