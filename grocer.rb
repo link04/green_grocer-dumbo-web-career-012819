@@ -19,7 +19,7 @@ def apply_coupons(cart, coupons)
   new_hash = {}
   if coupons.length > 0
     coupons.each do |coupon|
-      coupon.key
+      coupon.keys
     end
     new_hash
   else
