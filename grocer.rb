@@ -20,7 +20,7 @@ def apply_coupons(cart, coupons)
    coupons.each do |coupon|
     coupon_name = coupon[:item]
     coupon_item_num = coupon[:num]
-    cart_item = new_hash[coupon_name]
+    cart_item = cart[coupon_name]
 
      next if cart_item.nil? || cart_item[:count] < coupon_item_num
 
