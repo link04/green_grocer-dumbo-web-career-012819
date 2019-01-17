@@ -29,7 +29,7 @@ def apply_coupons(cart, coupons)
   else
     cart
   end
- 
+ binding.pry
 end
 
 def apply_clearance(cart)
