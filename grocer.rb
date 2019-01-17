@@ -25,7 +25,7 @@ def apply_coupons(cart, coupons)
        if new_hash[coupon[:item]]
          
        else
-         new_hash[coupon[:item]] = cart[coupon[:item]]
+         new_hash["#{coupon[:item]} W/COUPON"] = cart[coupon[:item]]
        end
        
      end
